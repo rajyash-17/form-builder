@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Daytime Office Theme (Light Mode) */
+  --bg-primary: #e9dfc7;
+  --bg-secondary: #dfd3b5;
+  --bg-surface: #f4ebd6;
+  --text-primary: #15151a;
+  --text-muted: #66635c;
+  --border-color: #cfc3a3;
+  --accent-amber: #d99a26;
+  --accent-red: #b3261e;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+.dark {
+  /* Midnight Stakeout Theme (Dark Mode Default) */
+  --bg-primary: #0b0b0d;
+  --bg-secondary: #15151a;
+  --bg-surface: #1c1c24;
+  --text-primary: #e9dfc7;
+  --text-muted: #8a8a92;
+  --border-color: #2a2a35;
+  --accent-amber: #f0b44c;
+  --accent-red: #b3261e;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle Paper Grain Texture */
+.paper-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+.dark .paper-grain {
+  background-image: radial-gradient(rgba(233, 223, 199, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Focused elements get an ambient lamp amber glow */
+input:focus, textarea:focus, select:focus, button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(240, 180, 76, 0.6), 0 0 12px rgba(240, 180, 76, 0.4);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

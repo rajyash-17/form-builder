@@ -1,0 +1,45 @@
+{
+  "name": "formflow",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "seed": "npx tsx src/scripts/seed.ts",
+    "test": "npx tsx src/__tests__/run-tests.ts"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tanstack/react-query": "^5.28.9",
+    "@trpc/client": "^11.0.0-rc.330",
+    "@trpc/react-query": "^11.0.0-rc.330",
+    "@trpc/server": "^11.0.0-rc.330",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.25",
+    "jose": "^5.2.3",
+    "lucide-react": "^0.359.0",
+    "mongoose": "^8.2.3",
+    "next": "14.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^2.2.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.3"
+  }
+}
